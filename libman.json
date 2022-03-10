@@ -1,0 +1,39 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "bootstrap@5.1.3",
+      "destination": "Assets/admin/libs/"
+    },
+    {
+      "library": "angular.js@1.8.2",
+      "destination": "Assets/admin/libs/"
+    },
+    {
+      "library": "angular-ui-router@1.0.29",
+      "destination": "Assets/admin/libs/"
+    },
+    {
+      "library": "jquery@3.6.0",
+      "destination": "Assets/admin/libs/"
+    },
+    {
+      "library": "toastr.js@2.1.4",
+      "destination": "Assets/admin/libs/"
+    },
+    {
+      "library": "font-awesome@6.0.0",
+      "destination": "Assets/admin/libs/"
+    },
+    {
+      "library": "angular-route@1.8.2",
+      "destination": "Assets/admin/libs/"
+    },
+    {
+      "library": "bootbox.js@5.5.2",
+      "destination": "Assets/admin/libs/"
+    }
+    
+  ]
+}
