@@ -24,6 +24,7 @@
                         }
                     });
                     $scope.totalPerson = response.data.length;
+                    console.log("OK:", response.data.length);
                     console.log("OK:", response.data);
                 }).catch(function (response) {
                     console.log("ERROR:", response);
