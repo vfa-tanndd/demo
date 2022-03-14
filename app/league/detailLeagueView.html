@@ -1,0 +1,132 @@
+﻿<div style="min-height: 1604.8px;">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Projects</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">Projects</li>
+                    </ol>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="overlay" style="text-align:center" ng-show="isShow"><i class="fas fa-2x fa-sync-alt fa-spin"></i></div>
+        <!-- Default box -->
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Projects</h3>
+
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="card-body p-0">
+                <table class="table table-striped projects">
+                    <thead>
+                        <tr>
+                            <th style="width: 1%">
+                                Rank
+                            </th>
+                            <th style="width: 20%">
+                                Team
+                            </th>
+                            <th style="width: 10%">
+                                Logo
+                            </th>
+                            <th style="width: 5%" class="text-center">
+                                Played
+                            </th>
+                            <th style="width: 5%" class="text-center">
+                                Win
+                            </th>
+                            <th style="width: 5%" class="text-center">
+                                Draw
+                            </th>
+                            <th style="width: 5%" class="text-center">
+                                Lose
+                            </th>
+                            <th style="width: 5%" class="text-center">
+                                Points
+                            </th>
+                            <th style="width: 30%">
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="item in ranks">
+                            <td>
+                                {{item.rank}}
+                            </td>
+                            <td>
+                                <a>
+                                    {{item.team.name}}
+                                </a>
+                            </td>
+                            <td>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item">
+                                        <img alt="Avatar" class="table-avatar" src="{{item.team.logo}}">
+                                    </li>
+                                </ul>
+                            </td>
+                            <td class="project-state">
+                                <span class="badge badge-light">{{item.all.played}}</span>
+                            </td>
+                            <td class="project-state">
+                                <span class="badge badge-primary">{{item.all.win}}</span>
+                            </td>
+                            <td class="project-state">
+                                <span class="badge badge-warning">{{item.all.draw}}</span>
+                            </td>
+                            <td class="project-state">
+                                <span class="badge badge-danger">{{item.all.lose}}</span>
+                            </td>
+                            <td class="project-state">
+                                <span class="badge badge-success">{{item.points}}</span>
+                            </td>
+                            <td class="project-actions text-right">
+                                <a class="btn btn-info btn-sm"  href="#">
+                                   
+                                    {{item.form | form1Filter}}
+                                </a>
+                                <a class="btn btn-info btn-sm" href="#">
+                                   
+                                    {{item.form | form2Filter}}
+                                </a>
+                                <a class="btn btn-danger btn-sm" href="#">
+                                   
+                                    {{item.form | form3Filter}}
+                                </a>
+                                <a class="btn btn-danger btn-sm" href="#">
+                                    
+                                    {{item.form | form4Filter}}
+                                </a>
+                                <a class="btn btn-danger btn-sm" href="#">
+                                   
+                                    {{item.form | form5Filter}}
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+
+    </section>
+    <!-- /.content -->
+</div>
