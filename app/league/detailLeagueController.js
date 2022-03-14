@@ -29,6 +29,7 @@
         }
         // auto load
         getLeague();
+        ///chào em
     }
 
     app.filter('form1Filter', function () {
