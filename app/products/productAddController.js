@@ -5,7 +5,11 @@
     function productAddController($scope, $http, $state, notificationService) {
         $scope.AddProduct = AddProduct;
         $scope.uploadFile = uploadFile;
-        
+        $scope.data = [
+            { id: 0, name: 'Khóa tài khoản' },
+            { id: 1, name: 'Tài khoản đang hoạt động' },
+            { id: 2, name: 'Tài khoản không hoạt động' }
+        ];
         $scope.SelectFile = function (e) {
             var reader = new FileReader();
             reader.onload = function (e) {
