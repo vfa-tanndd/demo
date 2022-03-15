@@ -23,9 +23,6 @@
                 .then(function (response) {
                     notificationService.displayInfo("Load Id: " + config + " thành công");
                     $scope.products = response.data;
-
-                   
-
                     console.log("Status:", $scope.products.Status);
                     console.log("OK:", response.data);
                 }).catch(function (response) {
