@@ -2,7 +2,11 @@
     app.controller('productEditController', productEditController);
     productEditController.$inject = ['$scope', '$http', '$state', '$stateParams','notificationService'];
     function productEditController($scope, $http, $state, $stateParams, notificationService) {
-
+        $scope.data = [
+            { id: 0, name: 'Khóa tài khoản' },
+            { id: 1, name: 'Tài khoản đang hoạt động' },
+            { id: 2, name: 'Tài khoản không hoạt động' }
+        ];
         $scope.UpdateProduct = UpdateProduct;
         $scope.SelectFile = function (e) {
             var reader = new FileReader();
@@ -19,6 +23,10 @@
                 .then(function (response) {
                     notificationService.displayInfo("Load Id: " + config + " thành công");
                     $scope.products = response.data;
+
+                   
+
+                    console.log("Status:", $scope.products.Status);
                     console.log("OK:", response.data);
                 }).catch(function (response) {
                     notificationService.displayError("Load không thành công");
